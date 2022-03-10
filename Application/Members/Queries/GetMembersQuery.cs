@@ -5,12 +5,4 @@ using MediatR;
 
 namespace Application.Members.Queries;
 
-public record GetMembersQuery : IRequest<MembersPaginationResult>
-{
-    public MembersRequest Request { get; set; }
-
-    public GetMembersQuery(MembersRequest request)
-    {
-        Request = request;
-    }
-}
+public record GetMembersQuery(MembersRequest Request) : IRequest<MembersPaginationResult>;

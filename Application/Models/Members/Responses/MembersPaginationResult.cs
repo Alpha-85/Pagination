@@ -2,10 +2,5 @@
 
 namespace Application.Models.Members.Responses;
 
-public class MembersPaginationResult
-{
-    public int Next { get; set;}
-    public int Previous { get; set;}
-    public int TotalCount { get; set;}
-    public IEnumerable<Member>? Members { get; set; }
-}
+public record MembersPaginationResult(int Next, int Previous, int TotalCount, IEnumerable<Member>? Members);
+

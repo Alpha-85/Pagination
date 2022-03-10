@@ -16,9 +16,10 @@ public class GetMembersQueryHandler : IRequestHandler<GetMembersQuery, MembersPa
     }
     public async Task<MembersPaginationResult> Handle(GetMembersQuery request, CancellationToken cancellationToken)
     {
-        var page = request.Request.Next ?? 1;
+        var page = request.Request.Next ?? 0;
         var pageSize = request.Request.PageSize ?? 10;
-        
+
+
         if (!_applicationDbContext.Members.Any())
         {
             var members = await _fakerService.GenerateMemberData();
@@ -38,13 +39,8 @@ public class GetMembersQueryHandler : IRequestHandler<GetMembersQuery, MembersPa
             .AsQueryable();
 
         var totalCount = result.Count();
-        
-        return new MembersPaginationResult
-        {
-            Next = page,
-            Previous = page - 1,
-            TotalCount = totalCount,
-            Members = result
-        };
+
+        return new MembersPaginationResult(page +1, page  , totalCount, result);
+
     }
 }

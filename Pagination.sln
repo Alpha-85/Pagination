@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application", "Application\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csproj", "{1293307B-3646-4270-AA7C-878D4F12A557}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{F808A8EE-79D1-4260-994A-74305980FBD7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{F808A8EE-79D1-4260-994A-74305980FBD7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{17DB6985-1407-4060-864B-0FE2B74A359E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -36,6 +38,12 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A9993C77-8230-45DD-A10D-19C4D65962A6} = {17DB6985-1407-4060-864B-0FE2B74A359E}
+		{698A3C67-E1C9-426A-B049-51BD72955906} = {17DB6985-1407-4060-864B-0FE2B74A359E}
+		{1293307B-3646-4270-AA7C-878D4F12A557} = {17DB6985-1407-4060-864B-0FE2B74A359E}
+		{F808A8EE-79D1-4260-994A-74305980FBD7} = {17DB6985-1407-4060-864B-0FE2B74A359E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0959C5AC-350C-4323-BF13-827419DDDF9D}
