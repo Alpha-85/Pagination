@@ -1,7 +1,7 @@
 ﻿using Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
 
-namespace Application.UnitTests.Helper;
+namespace Application.UnitTests.Helpers;
 
 public static class DbContextHelpers
 {
