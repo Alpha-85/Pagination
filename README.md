@@ -6,3 +6,4 @@ Example of a api endpoint for a paginator. Properties for finding next/previous 
 * .Net 6
 * MediatR pattern
 * Bogus for faking data
+* Unit tests (XUnit,FluentValidation,NSubstitute,AutoFixture)
