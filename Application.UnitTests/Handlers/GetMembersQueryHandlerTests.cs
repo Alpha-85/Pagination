@@ -2,13 +2,13 @@
 using Application.Members.Queries;
 using Application.Models.Members.Requests;
 using Application.Models.Members.Responses;
-using Application.UnitTests.Helper;
+using Application.UnitTests.Helpers;
 using AutoFixture;
 using FluentAssertions;
 using NSubstitute;
 using Xunit;
 
-namespace Application.UnitTests.Handler;
+namespace Application.UnitTests.Handlers;
 
 public class GetMembersQueryHandlerTests
 {
@@ -43,7 +43,7 @@ public class GetMembersQueryHandlerTests
     [InlineData(2, 20)]
     [InlineData(1, 100)]
     [InlineData(6, 10)]
-    public async Task GetMembersQueryHandler_Should_(int next, int pageSize)
+    public async Task GetMembersQueryHandler_Should_Return_Correct_Values(int next, int pageSize)
     {
         // Arrange
         var request = new GetMembersQuery(new MembersRequest(next, pageSize));

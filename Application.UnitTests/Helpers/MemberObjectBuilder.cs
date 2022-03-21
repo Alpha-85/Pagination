@@ -1,7 +1,7 @@
 ﻿using AutoFixture;
 using Domain.Models;
 
-namespace Application.UnitTests.Helper;
+namespace Application.UnitTests.Helpers;
 
 public static class MemberObjectBuilder
 {
